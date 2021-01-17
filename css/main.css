@@ -59,13 +59,47 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
-  margin: 0 auto;
 }
 
-.section {
-  padding: 94px 0;
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 .bacdrop {
@@ -381,29 +415,36 @@ img {
 }
 
 .title-page {
+  padding: 118px 0;
   background-color: #2f303a;
-  padding: 200px 0 200px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Imglogo.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center top;
+  background-size: 480px 400px;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .title-page {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-2x.jpg");
+  }
+}
+
+.home-page {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-color-white);
+  margin-bottom: 30px;
+  max-width: 360px;
 }
 
 .title {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.home-page {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-color-white);
-  margin-bottom: 30px;
-  width: 700px;
 }
 
 .button-title {
@@ -422,26 +463,46 @@ img {
   padding: 10px 32px;
 }
 
-.about {
-  padding-top: 94px;
+@media screen and (min-width: 768px) {
+  .title-page {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_tablet-1x.jpg");
+    background-size: 768px 400px;
+  }
 }
 
-.about.container {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+  .title-page {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_tablet-2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title-page {
+    padding: 200px 0 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_desk-1x.jpg");
+    background-size: 1600px 600px;
+  }
+  .home-page {
+    font-size: 44px;
+    line-height: 1.363;
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .title-page {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero_desk-2x.jpg");
+  }
+}
+
+.about-list-item {
   display: flex;
   flex-direction: column;
-}
-
-.about-list {
-  display: flex;
   align-items: center;
 }
 
 .about-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.about-list-item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .about-list-item-title {
@@ -460,26 +521,6 @@ img {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--accent-color-grey);
-  width: 260px;
-}
-
-.about-title,
-.command-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.166;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--accent-color-black);
-  margin-bottom: 50px;
-}
-
-.about-title-list {
-  display: flex;
-}
-
-.about-title-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .about-icon {
@@ -488,32 +529,63 @@ img {
 }
 
 .about-icon-container {
-  width: 270px;
+  width: 450px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  padding: 25px 102px;
+  padding: 25px 192px;
 }
 
-.about-title-list {
-  position: relative;
+@media screen and (min-width: 768px) {
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-icon-container {
+    width: 354px;
+    height: 120px;
+    padding: 25px 144px;
+  }
+  .about-list-item-text {
+    width: 354px;
+    height: 75px;
+  }
 }
 
-.about-text-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 370px;
-  height: 70px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--accent-color-white);
-  background: rgba(47, 48, 58, 0.8);
-  padding-top: 27px;
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-bottom: 0;
+  }
+  .about-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .about-list-item-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color-black);
+    padding-bottom: 10px;
+  }
+  .about-list-item-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--accent-color-grey);
+    width: 270px;
+  }
+  .about-icon-container {
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+  }
 }
 
 .command {
@@ -525,6 +597,16 @@ img {
 
 .command-list {
   display: flex;
+}
+
+.command-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--accent-color-black);
+  margin-bottom: 50px;
 }
 
 .command-list-title {
