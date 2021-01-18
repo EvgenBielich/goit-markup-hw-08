@@ -1,27 +1,44 @@
+.clients-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.178px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 30px;
+}
+
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.clients__list-item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 
 .clients-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  margin-bottom: 30px;
 
-  &:hover,
-  &:focus {
+
+    &:focus {
     border: 1px solid var(--accent-color-blue);
 
     & .clients-icon {
       fill: var(--accent-color-blue);
     } 
   }
-} 
+}
 
 .clients-icon {
   fill: #afb1b8;
@@ -29,8 +46,8 @@
 }
 
 .clients-icon1 {
-  width: 45px;
-  height: 50px;
+  width: 44px;
+  height: 49px;
 }
 .clients-icon2 {
   width: 40px;
@@ -53,12 +70,69 @@
   height: 45px;
 }
 
-.clients-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 50px;
-}
+
+
+// .clients-list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .clients-list-link {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 170px;
+//   height: 90px;
+//   border: 1px solid #afb1b8;
+//   box-sizing: border-box;
+//   border-radius: 4px;
+
+//   &:hover,
+//   &:focus {
+//     border: 1px solid var(--accent-color-blue);
+
+//     & .clients-icon {
+//       fill: var(--accent-color-blue);
+//     } 
+//   }
+// } 
+
+// .clients-icon {
+//   fill: #afb1b8;
+//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .clients-icon1 {
+//   width: 45px;
+//   height: 50px;
+// }
+// .clients-icon2 {
+//   width: 40px;
+//   height: 52px;
+// }
+// .clients-icon3 {
+//   width: 41px;
+//   height: 42px;
+// }
+// .clients-icon4 {
+//   width: 79px;
+//   height: 42px;
+// }
+// .clients-icon5 {
+//   width: 59px;
+//   height: 47px;
+// }
+// .clients-icon6 {
+//   width: 88px;
+//   height: 45px;
+// }
+
+// .clients-title {
+//   font-weight: bold;
+//   font-size: 36px;
+//   line-height: 42px;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   color: #212121;
+//   margin-bottom: 50px;
+// }

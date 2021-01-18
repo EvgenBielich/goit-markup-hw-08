@@ -495,14 +495,16 @@ img {
   }
 }
 
-.about-list-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.about-icon-container {
+  padding: 25px 192px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
-.about-list-item:not(:last-child) {
-  margin-bottom: 30px;
+.about-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .about-list-item-title {
@@ -511,46 +513,38 @@ img {
   line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--accent-color-black);
-  padding-bottom: 10px;
+  color: #212121;
+  margin-bottom: 10px;
 }
 
 .about-list-item-text {
-  font-weight: normal;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--accent-color-grey);
+  color: #757575;
 }
 
-.about-icon {
-  width: 70px;
-  height: 70px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .about-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .about-list-item-title {
+    text-align: center;
+  }
 }
 
-.about-icon-container {
-  width: 450px;
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  padding: 25px 192px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .about-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin: -15px;
+  }
+  .about-list-item {
+    flex-basis: calc(100% / 3 - 15px);
+    margin: 15px;
   }
   .about-icon-container {
-    width: 354px;
-    height: 120px;
-    padding: 25px 144px;
-  }
-  .about-list-item-text {
-    width: 354px;
-    height: 75px;
+    padding: 25px 142px;
   }
 }
 
@@ -558,33 +552,26 @@ img {
   .about {
     padding-bottom: 0;
   }
+  .about.container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-list {
+    display: flex;
+    align-items: center;
+  }
   .about-list-item:not(:last-child) {
     margin-right: 30px;
   }
-  .about-list-item-title {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.142;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--accent-color-black);
-    padding-bottom: 10px;
-  }
   .about-list-item-text {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
-    color: var(--accent-color-grey);
-    width: 270px;
+    width: 260px;
+  }
+  .about-icon {
+    width: 70px;
+    height: 70px;
   }
   .about-icon-container {
-    width: 270px;
-    height: 120px;
-    background: #f5f4fa;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    padding: 25px 100px;
+    padding: 25px 102px;
   }
 }
 
@@ -780,7 +767,7 @@ img {
   }
   .command-list-item {
     width: 270px;
-    height: 480px;
+    height: 425px;
   }
   .command-list-item:not(:last-child) {
     margin-right: 30px;
@@ -832,27 +819,44 @@ img {
   }
 }
 
+.clients-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.178px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 30px;
+}
+
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.clients__list-item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 
 .clients-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  margin-bottom: 30px;
 }
 
-.clients-list-link:hover, .clients-list-link:focus {
+.clients-list-link:focus {
   border: 1px solid var(--accent-color-blue);
 }
 
-.clients-list-link:hover .clients-icon, .clients-list-link:focus .clients-icon {
+.clients-list-link:focus .clients-icon {
   fill: var(--accent-color-blue);
 }
 
@@ -862,8 +866,8 @@ img {
 }
 
 .clients-icon1 {
-  width: 45px;
-  height: 50px;
+  width: 44px;
+  height: 49px;
 }
 
 .clients-icon2 {
@@ -889,16 +893,6 @@ img {
 .clients-icon6 {
   width: 88px;
   height: 45px;
-}
-
-.clients-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 50px;
 }
 
 .footer {
