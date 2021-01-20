@@ -17,10 +17,6 @@
     margin-bottom: 50px;
   }
 
-  .about-title-list {
-    display: flex;
-  }
-
   .about-title-list-item {
     &:not(:last-child) {
       margin-right: 30px;
@@ -28,6 +24,7 @@
   }
 
   .about-title-list {
+    display: flex;
     position: relative;
   }
 
