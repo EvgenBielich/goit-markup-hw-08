@@ -103,7 +103,7 @@ img {
 }
 
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
   position: relative;
 }
 
@@ -231,7 +231,7 @@ img {
     text-align: start;
   }
   .nav-block {
-    margin-bottom: 100px;
+    margin-bottom: 130px;
   }
   .contact-info-item:not(:last-child) {
     margin-bottom: 30px;

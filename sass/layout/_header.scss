@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
   position: relative;
 }
 
@@ -109,7 +109,7 @@
 
     &:hover,
     &:focus {
-      color:  #2196f3;
+      color: #2196f3;
     }
   }
 }
@@ -125,7 +125,7 @@
   }
 
   .nav-block {
-    margin-bottom: 100px;
+    margin-bottom: 130px;
   }
 
   .contact-info-item {
@@ -147,13 +147,13 @@
     letter-spacing: 0.02em;
     color: #2196f3;
   }
-  
+
   .contact-info-tel {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.166;
     letter-spacing: 0.02em;
-  
+
     color: #757575;
   }
 }
@@ -188,7 +188,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .contact-info-mail,
   .contact-info-tel {
     &:hover,
@@ -200,7 +199,6 @@
         fill: var(--accent-color-blue);
       }
     }
-    
   }
 
   .contact-info {
@@ -212,8 +210,6 @@
     display: flex;
     align-items: center;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-   
   }
 
   .contact-icon {
@@ -223,9 +219,7 @@
     fill: #757575;
   }
 
-  
-
-  .address  {
+  .address {
     padding: 21px 0;
   }
 
@@ -261,14 +255,11 @@
   .contact-info-item:not(:last-child) {
     margin-bottom: 10px;
   }
-
 }
-
 
 @media screen and (min-width: 1200px) {
   .address {
     display: flex;
-
   }
 
   .contact-info-mail {
@@ -288,11 +279,7 @@
   .navigation-list-link-activ::after {
     bottom: -20px;
   }
-
-  
 }
-
-
 
 // .header {
 //   padding-top: 25px;
