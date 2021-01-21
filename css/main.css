@@ -370,6 +370,7 @@ img {
   display: inline-flex;
   border: none;
   background-color: transparent;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -400,11 +401,11 @@ img {
   .menu-mobile {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 790px;
-    padding: 0px 84px 50px 15px;
+    padding: 50px 83px 48px 40px;
   }
   .menu-mobile.is-open {
     display: block;
@@ -587,19 +588,23 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-info-item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .header {
+    padding: 12px 0;
+  }
   .contact-info {
     font-size: 14px;
     line-height: 1.142;
   }
   .address {
     display: flex;
+    padding: 0;
   }
   .contact-info-mail {
     margin-right: 30px;
@@ -613,7 +618,7 @@ img {
     padding-right: 265px;
   }
   .navigation-list-link-activ::after {
-    bottom: -20px;
+    bottom: -32px;
   }
 }
 
@@ -1218,6 +1223,7 @@ img {
   }
   .footer-address-container {
     margin-right: 165px;
+    text-align: center;
   }
 }
 
