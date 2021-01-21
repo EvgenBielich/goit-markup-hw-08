@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 
   &.is-hidden{
     transition: all 500ms linear 500ms;
@@ -23,9 +24,16 @@
   padding: 40px;
 
   .bacdrop.is-hidden &{
+    display: none;
     transform: translate(-50%, 50%) scale(0);
     transition: transform 500ms linear 0ms;
   }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .close-btn {
@@ -52,11 +60,7 @@
   align-items: center;
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 
 .modal-form {
   display: flex;
